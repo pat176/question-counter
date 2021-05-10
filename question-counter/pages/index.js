@@ -13,9 +13,9 @@ export default function Home() {
       let arr = [];
       localStorage.setItem("records", JSON.stringify(arr));
     }
-    if (JSON.parse(localStorage.getItem("date")) != d.toLocaleDateString()) {
+    if (localStorage.getItem("date") != d.toLocaleDateString()) {
       console.log("here   ......");
-      localStorage.setItem("date", JSON.stringify(d.toLocaleDateString()));
+      localStorage.setItem("date", d.toLocaleDateString());
       const rec = [...localStorage.getItem("records")];
       rec.push(localStorage.getItem("count"));
       console.log(rec);
