@@ -25,7 +25,7 @@ export default function Home() {
       console.log("heheheheheheh");
     }
     setstate({
-      count: parseInt(localStorage.getItem("count")),
+      count: parseInt(JSON.parse(localStorage.getItem("count"))),
       recordArr: [...JSON.parse(localStorage.getItem("records"))],
     });
   }, []);
