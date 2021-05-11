@@ -70,7 +70,7 @@ export default function Home() {
       // console.log("here");
       localStorage.setItem("count", JSON.stringify(0));
       // console.log("heheheheheheh");
-      localStorage.setItem("time", JSON.stingify([0, 0, 0]));
+      localStorage.setItem("time", JSON.stringify([0, 0, 0]));
     }
     // console.log(typeof JSON.parse(localStorage.getItem("records")));
     console.log("herrrrreee");
