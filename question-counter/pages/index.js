@@ -73,6 +73,7 @@ export default function Home() {
       localStorage.setItem("time", JSON.stingify([0, 0, 0]));
     }
     // console.log(typeof JSON.parse(localStorage.getItem("records")));
+    console.log("herrrrreee");
     setstate({
       count: parseInt(JSON.parse(localStorage.getItem("count"))),
       recordArr: [...JSON.parse(localStorage.getItem("records"))].reverse(),
@@ -102,6 +103,7 @@ export default function Home() {
         if (state.isActive === true) {
           setstate({
             ...state,
+            count: state.count,
             time: tmp,
           });
           localStorage.setItem("time", JSON.stringify(tmp));
