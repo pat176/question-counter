@@ -103,7 +103,7 @@ export default function Home() {
         if (state.isActive === true) {
           setstate({
             ...state,
-            count: state.count,
+            count: JSON.parse(localStorage.getItem("count")),
             time: tmp,
           });
           localStorage.setItem("time", JSON.stringify(tmp));
