@@ -174,6 +174,12 @@ export default function Home() {
             -
           </button>
         </div>
+        <div className={styles.prev}>
+          Today's Avg ={" "}
+          {state.count /
+            (state.time[2] / 60 + state.time[1] + state.time[0] * 60)}{" "}
+          Ques/Min
+        </div>
         <div>
           <span className={styles.prev}>
             Previous Days | Total Questions Done = {sum(state.recordArr)} | Avg.
