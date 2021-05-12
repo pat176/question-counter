@@ -176,8 +176,11 @@ export default function Home() {
         </div>
         <div className={styles.prev}>
           Today's Avg ={" "}
-          {state.count /
-            (state.time[2] / 60 + state.time[1] + state.time[0] * 60)}{" "}
+          {roundNumber(
+            state.count /
+              (state.time[2] / 60 + state.time[1] + state.time[0] * 60),
+            2
+          )}{" "}
           Ques/Min
         </div>
         <div>
