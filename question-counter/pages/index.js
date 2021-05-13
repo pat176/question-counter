@@ -186,8 +186,9 @@ export default function Home() {
         <div>
           <span className={styles.prev}>
             Previous Days | Total Questions Done = {sum(state.recordArr)} | Avg.
-            Questions Per Day = {sum(state.recordArr) / state.recordArr.length}{" "}
-            | Solving Speed ={" "}
+            Questions Per Day ={" "}
+            {(roundNumber(sum(state.recordArr) / state.recordArr.length), 2)} |
+            Solving Speed ={" "}
             {roundNumber(avgTime(state.recordArr), 2) + " Ques/Min"}
           </span>
           {state.recordArr.map((element, index) => {
