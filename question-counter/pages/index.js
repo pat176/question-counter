@@ -194,7 +194,7 @@ export default function Home() {
           </span>
           {state.recordArr.map((element, index) => {
             return (
-              <div className={styles.records + " " + element[0]>=90 ? styles.green : ""} key={index + element[0]}>
+              <div className={styles.records + " " + ((element[0]>=90 )? styles.green : "")} key={index + element[0]}>
                 {element[0] +
                   " Questions   | Time Taken: " +
                   element[2][0] +
