@@ -59,12 +59,13 @@ export default function Home() {
       localStorage.getItem("date") != JSON.stringify(d.toLocaleDateString())
     ) {
       // console.log("here   ......");
-      localStorage.setItem("date", JSON.stringify(d.toLocaleDateString()));
       const rec = [...JSON.parse(localStorage.getItem("records"))];
       rec.push([
         JSON.parse(localStorage.getItem("count")),
+        JSON.parse(localStorage.getItem("date")),
         JSON.parse(localStorage.getItem("time")),
       ]);
+      localStorage.setItem("date", JSON.stringify(d.toLocaleDateString()));
       // console.log(rec);
       localStorage.setItem("records", JSON.stringify(rec));
       // console.log("here");
@@ -189,18 +190,18 @@ export default function Home() {
             Questions Per Day ={" "}
             {roundNumber(sum(state.recordArr) / state.recordArr.length, 2)} |
             Solving Speed ={" "}
-            {roundNumber(avgTime(state.recordArr), 2) + " Ques/Min"}
+            {roundNumber(avgTime(state.recordArr), 2) + " Ques/Min"} | Date ={" "}{d.toLocaleDateString()}
           </span>
           {state.recordArr.map((element, index) => {
             return (
-              <div className={styles.records} key={index + element[0]}>
+              <div className={styles.records + element[0]>=90 ? styles.green : ""} key={index + element[0]}>
                 {element[0] +
                   " Questions   | Time Taken: " +
-                  element[1][0] +
+                  element[2][0] +
                   ":" +
-                  element[1][1] +
+                  element[2][1] +
                   ":" +
-                  element[1][2]}
+                  element[2][2]  + " | Date: " + element[1]}
               </div>
             );
           })}
