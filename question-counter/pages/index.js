@@ -74,7 +74,7 @@ export default function Home() {
       localStorage.setItem("count", JSON.stringify(0));
       // console.log("heheheheheheh");
       localStorage.setItem("time", JSON.stringify([0, 0, 0]));
-      setState({...state, difficulty: JSON.parse(localStorage.getItem("difficulty")})
+      setState({...state, difficulty: JSON.parse(localStorage.getItem("difficulty")}))
     }
     // console.log(typeof JSON.parse(localStorage.getItem("records")));
     console.log("herrrrreee");
