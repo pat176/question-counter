@@ -59,6 +59,7 @@ export default function Home() {
     if (localStorage.getItem("difficulty")) {
       setstate({...state, difficulty: JSON.parse(localStorage.getItem("difficulty"))})
       console.log(state.difficulty)
+      console,log("herreeeeeeeeee")
     }
     if (
       localStorage.getItem("date") != JSON.stringify(d.toLocaleDateString())
@@ -85,6 +86,7 @@ export default function Home() {
       count: parseInt(JSON.parse(localStorage.getItem("count"))),
       recordArr: [...JSON.parse(localStorage.getItem("records"))].reverse(),
       time: JSON.parse(localStorage.getItem("time")),
+      difficulty: JSON.parse(localStorage.getItem("difficulty"))
     });
   }, []);
   useEffect(() => {
