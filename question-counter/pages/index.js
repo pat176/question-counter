@@ -206,7 +206,7 @@ export default function Home() {
             {roundNumber(avgTime(state.recordArr), 2) + " Ques/Min"} | Date ={" "}{d.toLocaleDateString()}
           </span>
           {state.recordArr.map((element, index) => {
-            const tmp = element[3]
+            const tmp = element[3];
             return (
               <div className={styles.records + " " + ((element[0]>= tmp)? styles.green : "")} key={index + element[0]}>
                 {element[0] +
@@ -215,7 +215,7 @@ export default function Home() {
                   ":" +
                   element[2][1] +
                   ":" +
-                  element[2][2]  + " | Date: " + element[1] "| Difficulty: " + tmp}
+                  element[2][2]  + " | Date: " + element[1] + " | Difficulty: " + tmp}
               </div>
             );
           })}
