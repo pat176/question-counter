@@ -65,7 +65,7 @@ export default function Home() {
         JSON.parse(localStorage.getItem("count")),
         JSON.parse(localStorage.getItem("date")),
         JSON.parse(localStorage.getItem("time")),
-        JSON.parse(localStorage.getItem("difficulty")
+        JSON.parse(localStorage.getItem("difficulty"))
       ]);
       localStorage.setItem("date", JSON.stringify(d.toLocaleDateString()));
       // console.log(rec);
