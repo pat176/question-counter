@@ -180,7 +180,7 @@ export default function Home() {
         </div>
         <div>Select Difficulty: {[[30, "Easy"], [60, "Medium"], [90, "Hard"]].map((el, index)=> {
           return (<button className={styles.records + " " + (el[0]==state.difficulty ? styles.green : "")} onClick={()=>{
-            setState({
+            setstate({
               ...state,
               difficulty: el[0]
             })
