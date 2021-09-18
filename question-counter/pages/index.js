@@ -185,7 +185,7 @@ export default function Home() {
               difficulty: el[0]
             })
             localStorage.setItem("difficulty",el[0])
-          }}>el[1]</button>)
+          }}>{el[1]}</button>)
         })}
         </div>
         <div className={styles.prev}>
