@@ -42,6 +42,7 @@ export default function Home() {
     time: [0, 0, 0],
     isActive: false,
     isPaused: true,
+    difficulty: 0
   });
   useEffect(() => {
     // console.log(d.toLocaleDateString());
@@ -64,6 +65,7 @@ export default function Home() {
         JSON.parse(localStorage.getItem("count")),
         JSON.parse(localStorage.getItem("date")),
         JSON.parse(localStorage.getItem("time")),
+        JSON.parse(localStorage.getItem("difficulty")
       ]);
       localStorage.setItem("date", JSON.stringify(d.toLocaleDateString()));
       // console.log(rec);
@@ -72,6 +74,7 @@ export default function Home() {
       localStorage.setItem("count", JSON.stringify(0));
       // console.log("heheheheheheh");
       localStorage.setItem("time", JSON.stringify([0, 0, 0]));
+      setState({...state, difficulty: JSON.parse(localStorage.getItem("difficulty")})
     }
     // console.log(typeof JSON.parse(localStorage.getItem("records")));
     console.log("herrrrreee");
@@ -175,6 +178,16 @@ export default function Home() {
             -
           </button>
         </div>
+        <div>Select Difficulty: {[[30, "Easy"], [60, "Medium"], [90, "Hard"]].map(el, index)=> {
+          return (<button className={styles.records + " " + {el[0]==state.difficulty ? styles.green : ""}} onClick={()=>{
+            setState({
+              ...state,
+              difficulty: el[0]
+            })
+            localStorage.setItem("difficulty",el[0])
+          }}>el[1]</button>)
+        }}
+        </div>
         <div className={styles.prev}>
           Today's Avg ={" "}
           {roundNumber(
@@ -193,15 +206,16 @@ export default function Home() {
             {roundNumber(avgTime(state.recordArr), 2) + " Ques/Min"} | Date ={" "}{d.toLocaleDateString()}
           </span>
           {state.recordArr.map((element, index) => {
+            const tmp = element[3]
             return (
-              <div className={styles.records + " " + ((element[0]>=90 )? styles.green : "")} key={index + element[0]}>
+              <div className={styles.records + " " + ((element[0]>= tmp)? styles.green : "")} key={index + element[0]}>
                 {element[0] +
                   " Questions   | Time Taken: " +
                   element[2][0] +
                   ":" +
                   element[2][1] +
                   ":" +
-                  element[2][2]  + " | Date: " + element[1]}
+                  element[2][2]  + " | Date: " + element[1] "| Difficulty: " + tmp}
               </div>
             );
           })}
