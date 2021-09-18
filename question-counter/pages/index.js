@@ -57,7 +57,7 @@ export default function Home() {
       localStorage.setItem("records", JSON.stringify(arr));
     }
     if (localStorage.getItem("difficulty")) {
-      setState({...state, difficulty: JSON.parse(localStorage.getItem("difficulty"))})
+      setstate({...state, difficulty: JSON.parse(localStorage.getItem("difficulty"))})
     }
     if (
       localStorage.getItem("date") != JSON.stringify(d.toLocaleDateString())
