@@ -59,7 +59,7 @@ export default function Home() {
     if (localStorage.getItem("difficulty")) {
       setstate({...state, difficulty: JSON.parse(localStorage.getItem("difficulty"))})
       console.log(state.difficulty)
-      console,log("herreeeeeeeeee")
+      console.log("herreeeeeeeeee")
     }
     if (
       localStorage.getItem("date") != JSON.stringify(d.toLocaleDateString())
