@@ -183,7 +183,7 @@ export default function Home() {
             -
           </button>
         </div>
-        <div>Select Difficulty: {[[30, "Easy"], [60, "Medium"], [90, "Hard"]].map((el, index)=> {
+        <div>Select Difficulty: {[[90, "Easy"], [60, "Medium"], [30, "Hard"]].map((el, index)=> {
           return (<button className={styles.records + " " + (el[0]==state.difficulty ? styles.green : "")} onClick={()=>{
             setstate({
               ...state,
