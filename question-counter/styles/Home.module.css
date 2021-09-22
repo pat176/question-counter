@@ -1,18 +1,19 @@
 .container {
   text-align: center;
+  color: red;
 }
 .count {
   text-align: center;
   font-weight: bolder;
   font-size: 3em;
-  color: white;
+  color: red;
 }
 
 .button {
   border-radius: 100%;
   border: 0px;
-  background: #fff;
-  color: #ff0000;
+  background: red;
+  color: white;
   width: 40px;
   height: 40px;
   font-size: 1.5em;
@@ -21,8 +22,8 @@
 .buttonSt {
   border-radius: 100%;
   border: 0px;
-  background: #fff;
-  color: #ff0000;
+  background: red;
+  color: white;
   width: 40px;
   height: 40px;
   font-size: 1em;
@@ -32,15 +33,15 @@
 .prev {
   font-weight: bold;
   font-size: 1em;
-  color: white;
+  color: red;
   margin: 5px auto;
 }
 
 .records {
   border: 2px solid white;
   padding: 5px 7px;
-  color: red;
-  background: white;
+  color: white;
+  background: red;
   margin: 5px 20px;
   border-radius: 10px;
 }
