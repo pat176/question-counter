@@ -8,6 +8,7 @@ body {
 body {
   background: black;
   font-weight: bolder;
+  color: red;
 }
 a {
   color: inherit;
