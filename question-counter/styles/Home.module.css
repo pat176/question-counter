@@ -38,7 +38,7 @@
 }
 
 .records {
-  border: 2px solid white;
+  border: 2px solid red;
   padding: 5px 7px;
   color: white;
   background: red;
@@ -46,7 +46,7 @@
   border-radius: 10px;
 }
 .green {
-  border-color: white;
+  border-color: red;
   color: white;
   background-color: #03C04A;
 }
