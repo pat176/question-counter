@@ -30,7 +30,7 @@ const sum = (arr) => {
 const avgTime = (arr) => {
   let out = 0;
   for (let i = 0; i < arr.length; i++) {
-    out += arr[i][1][2] / 60 + arr[i][1][1] + arr[i][1][0] * 60;
+    out += arr[i][2][2] / 60 + arr[i][2][1] + arr[i][2][0] * 60;
   }
   console.log("out = ", out);
   return sum(arr) / out;
